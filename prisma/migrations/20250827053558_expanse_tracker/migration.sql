@@ -1,7 +1,7 @@
 -- CreateTable
 CREATE TABLE "public"."User" (
     "id" TEXT NOT NULL,
-    "userId" TEXT NOT NULL,
+    "clerkUserId" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "name" TEXT,
     "imageUrl" TEXT,
@@ -25,7 +25,7 @@ CREATE TABLE "public"."Record" (
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "User_userId_key" ON "public"."User"("userId");
+CREATE UNIQUE INDEX "User_clerkUserId_key" ON "public"."User"("clerkUserId");
 
 -- CreateIndex
 CREATE INDEX "Record_userId_idx" ON "public"."Record"("userId");
