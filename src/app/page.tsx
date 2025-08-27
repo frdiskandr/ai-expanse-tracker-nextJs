@@ -1,9 +1,7 @@
-import Navbar from "@/components/navbar";
-
 export default function Home() {
   return (
-    <main className="">
-      <Navbar/>
+    <main className="container mx-auto min-h-screen">
+      hello world!!
     </main>
   );
 }
