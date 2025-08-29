@@ -8,7 +8,7 @@ type Props = {
 const Modal = (props: Props) => {
     return (
         <>
-        <button onClick={() => document.getElementById("profile_modal").showModal()}>open modal</button>
+        {/* <button onClick={() => document.getElementById("profile_modal").showModal()}>open modal</button> */}
         <dialog id="profile_modal" className="modal">
             <div className="modal-box">
                 <form method="dialog">
