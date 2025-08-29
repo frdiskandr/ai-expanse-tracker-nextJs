@@ -11,8 +11,8 @@ const Navbar = async () => {
     console.log(user)
 
     return (
-        <div className='bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900/20 fixed w-full z-10 border-none top-0'>
-            <div className='container mx-auto'>
+        <div className='bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900/20 fixed w-full z-50 border-none top-0'>
+            <div className='container mx-auto z-10 relative'>
                 <div className="navbar shadow-sm bg-transparent">
                     <div className="navbar-start">
                         <Link href={"/"} className="btn btn-ghost text-xl flex gap-2">
