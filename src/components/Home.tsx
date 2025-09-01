@@ -1,5 +1,10 @@
 import { User } from '@clerk/nextjs/server'
 import React from 'react'
+import AddNewRecord from './addNewRecord'
+import { RecordChart } from './RecordChart'
+import { ExpenseStarts } from './ExpenseStarts'
+import { AiInsights } from './AiInsights'
+import RecordHistory from './recordHistory'
 
 type props = {
   user: User
@@ -20,7 +25,7 @@ const Home = (props: props) => {
               {/* User Image - responsive sizing */}
               <div className='relative flex-shrink-0'>
                 <img
-                  src={props.user?.imageUrl}
+                  src={props.user.imageUrl}
                   alt={`${props.user.firstName}&#39;s profile`}
                   className='w-16 h-16 sm:w-20 sm:h-20 rounded-2xl border-2 border-white dark:border-gray-600 shadow-lg'
                 />
@@ -29,14 +34,14 @@ const Home = (props: props) => {
                 </div>
               </div>
 
-              {/* User Details - responsive text and layout */}
+              {/* props.User Details - responsive text and layout */}
               <div className='flex-1 text-center sm:text-left'>
                 <div className='flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2 sm:gap-3 mb-3'>
                   <div className='w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-emerald-500 via-green-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg'>
                     <span className='text-white text-sm sm:text-lg'>👋</span>
                   </div>
                   <h2 className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100'>
-                    Welcome Back, {props.user?.firstName}!
+                    Welcome Back, {props.user.firstName}!
                   </h2>
                 </div>
                 <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 max-w-md mx-auto sm:mx-0'>
@@ -55,7 +60,7 @@ const Home = (props: props) => {
                         Joined
                       </span>
                       <span className='text-sm font-semibold text-gray-800 dark:text-gray-200'>
-                        {new Date(props.user?.createdAt).toLocaleDateString()}
+                        {new Date(props.user.createdAt).toLocaleDateString()}
                       </span>
                     </div>
                   </div>
@@ -68,7 +73,7 @@ const Home = (props: props) => {
                         Last Active
                       </span>
                       <span className='text-sm font-semibold text-gray-800 dark:text-gray-200'>
-                        {props.user?.lastActiveAt
+                        {props.user.lastActiveAt
                           ? new Date(props.user.lastActiveAt).toLocaleDateString()
                           : 'Today'}
                       </span>
@@ -78,19 +83,21 @@ const Home = (props: props) => {
               </div>
             </div>
             {/* Add New Expense */}
-           
+            <AddNewRecord />
           </div>
 
           {/* Right Column - Stacked below on mobile */}
           <div className='space-y-4 sm:space-y-6'>
             {/* Expense Analytics */}
-           
+            <RecordChart />
+            <ExpenseStarts />
           </div>
         </div>
 
         {/* Full-width sections below - mobile-friendly spacing */}
         <div className='mt-6 sm:mt-8 space-y-4 sm:space-y-6'>
-          
+          <AiInsights />
+          <RecordHistory />
         </div>
       </div>
     </main>
