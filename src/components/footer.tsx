@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import Logo from './logo';
 
 const Footer = () => {
   return (
-    <footer className='relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-800 dark:to-emerald-900/20 border-t border-gray-100/50 dark:border-gray-700/50'>
+    <footer className='relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 border-t border-gray-100/50 dark:border-gray-700/50'>
       {/* Gradient accent line */}
       <div className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-yellow-200 to-blue-900'></div>
 
@@ -11,9 +12,7 @@ const Footer = () => {
           {/* Logo and Tagline */}
           <div className='text-center md:text-left'>
             <div className='inline-flex items-center gap-2 mb-4'>
-              <div className='w-8 h-8 bg-gradient-to-br from-blue-400 via-yellow-200 to-blue-900 rounded-xl flex items-center justify-center shadow-lg'>
-                <span className='text-white text-lg'>💰</span>
-              </div>
+              <Logo/>
               <h2 className='text-xl font-bold bg-gradient-to-r from-blue-400 via-yellow-200 to-blue-900 bg-clip-text text-transparent'>
                 ExpenseTracker AI
               </h2>
@@ -62,19 +61,19 @@ const Footer = () => {
             </h3>
             <div className='space-y-3'>
               <div className='flex items-center gap-3 text-gray-600 dark:text-gray-400 text-sm'>
-                <div className='w-5 h-5 bg-gradient-to-br from-emerald-500 to-green-500 rounded-md flex items-center justify-center shadow-sm'>
+                <div className='w-5 h-5 bg-gradient-to-br from-blue-500 to-blue-500 rounded-md flex items-center justify-center shadow-sm'>
                   <span className='text-white text-xs'>🤖</span>
                 </div>
                 AI-Powered Insights
               </div>
               <div className='flex items-center gap-3 text-gray-600 dark:text-gray-400 text-sm'>
-                <div className='w-5 h-5 bg-gradient-to-br from-green-500 to-teal-500 rounded-md flex items-center justify-center shadow-sm'>
+                <div className='w-5 h-5 bg-gradient-to-br from-blue-500 to-teal-500 rounded-md flex items-center justify-center shadow-sm'>
                   <span className='text-white text-xs'>✨</span>
                 </div>
                 Smart Categorization
               </div>
               <div className='flex items-center gap-3 text-gray-600 dark:text-gray-400 text-sm'>
-                <div className='w-5 h-5 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-md flex items-center justify-center shadow-sm'>
+                <div className='w-5 h-5 bg-gradient-to-br from-teal-500 to-blue-500 rounded-md flex items-center justify-center shadow-sm'>
                   <span className='text-white text-xs'>📊</span>
                 </div>
                 Analytics Dashboard
@@ -96,7 +95,7 @@ const Footer = () => {
           </div>
 
           <div className='flex items-center gap-4'>
-            <div className='inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/30 text-blue-400 dark:blue-400 px-3 py-1 rounded-full text-xs font-medium'>
+            <div className='inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 text-blue-400 dark:blue-400 px-3 py-1 rounded-full text-xs font-medium'>
               <span className='w-1.5 h-1.5 bg-blue-400 dark:bg-blue-400 rounded-full animate-pulse'></span>
               Made by Faried Iskandar
             </div>

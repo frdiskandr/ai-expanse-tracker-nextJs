@@ -11,18 +11,18 @@ const Navbar = async () => {
     console.log(user)
 
     return (
-        <div className='bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900/20 fixed w-full z-50 border-none top-0'>
+        <div className='bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 fixed w-full z-50 border-none top-0'>
             <div className='container mx-auto z-10 relative'>
-                <div className="navbar shadow-sm bg-transparent">
+                <div className="navbar shadow-sm">
                     <div className="navbar-start">
                         <Link href={"/"} className="btn btn-ghost text-xl flex gap-2">
                             <Logo />
-                            <h4 className='bg-gradient-to-r from-blue-800 via-yellow-200/80 to-blue-800 bg-clip-text text-transparent'>Money Tracker</h4>
+                            <h4 className='bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent'>Money Tracker</h4>
                         </Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 text-lg">
-                            <li><Link href={"/home"}>Home</Link></li>
+                            <li><Link href={"/"}>Home</Link></li>
                             <li>
                                 <Link href={"/about"}>About</Link>
                             </li>
