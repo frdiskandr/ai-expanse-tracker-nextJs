@@ -2,7 +2,7 @@ import { User } from '@clerk/nextjs/server'
 import React from 'react'
 import AddNewRecord from './addNewRecord'
 import { RecordChart } from './RecordChart'
-import { ExpenseStarts } from './ExpenseStarts'
+import ExpenseStats from './ExpenseStarts'
 import { AiInsights } from './AiInsights'
 import RecordHistory from './recordHistory'
 
@@ -90,7 +90,7 @@ const Home = (props: props) => {
           <div className='space-y-4 sm:space-y-6'>
             {/* Expense Analytics */}
             <RecordChart />
-            <ExpenseStarts />
+            <ExpenseStats />
           </div>
         </div>
 

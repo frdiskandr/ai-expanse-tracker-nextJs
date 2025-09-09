@@ -1,3 +1,4 @@
+'use server'
 import { ExpanseRecord, generateAIAnswer } from "@/lib/ai";
 import { CheckUser } from "@/lib/checkUser"
 import { db } from "@/lib/db";

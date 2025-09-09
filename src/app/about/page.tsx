@@ -4,13 +4,13 @@ import React from 'react'
 const About = () => {
   return (<div className='font-sans bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 text-gray-800 dark:text-gray-200 transition-all duration-300 min-h-screen'>
     {/* Hero Section */}
-    <section className='relative overflow-hidden flex flex-col items-center justify-center text-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-blue-800/10 via-yellow-200/5 to-blue-800/10 dark:from-blue-900/30 dark:via-green-900/20 dark:to-teal-900/30'>
+    <section className='relative overflow-hidden flex flex-col items-center justify-center text-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-blue-800/10 via-yellow-200/5 to-blue-800/10 dark:from-blue-900/30 dark:via-blue-900/20 dark:to-teal-900/30'>
       <div className='absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10'></div>
       <div className='relative z-10 max-w-4xl mx-auto w-full'>
-        <div className='inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-800 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 shadow-lg'>
-          <span className='w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-800 dark:bg-blue-800 rounded-full animate-pulse'></span>
+        <div className='inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 text-blue-300 dark:text-blue-300 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 shadow-lg'>
+          <span className='w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-800 dark:bg-blue-400 rounded-full animate-pulse'></span>
           <span className='hidden sm:inline'>Powered by AI Teknologia</span>
-          <span className='sm:hidden'>AI Teknologia</span>
+          <span className='sm:hidden'>AI Teknologi</span>
         </div>
         <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-gray-900 dark:text-gray-100 leading-tight'>
           About{' '}
@@ -25,7 +25,7 @@ const About = () => {
         <div className='mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 sm:px-0'>
           <Link
             href='/sign-up'
-            className='group relative overflow-hidden bg-gradient-to-r from-blue-800 via-yellow-200 to-blue-800 hover:from-blue-700 hover:via-blue-600 hover:to-teal-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold shadow-2xl hover:shadow-3xl transition-all duration-200 transform hover:-translate-y-0.5'
+            className='group relative overflow-hidden bg-gradient-to-r from-blue-800  to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-teal-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold shadow-2xl hover:shadow-3xl transition-all duration-200 transform hover:-translate-y-0.5'
           >
             <span className='relative z-10'>Start Your Journey</span>
             <div className='absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200'></div>
@@ -60,17 +60,17 @@ const About = () => {
           better budgeting and financial freedom.
         </p>
         <div className='mt-10 grid grid-cols-1 md:grid-cols-3 gap-6'>
-          <div className='bg-gradient-to-br from-blue-50 to-green-50 dark:from-blue-900/20 dark:to-green-900/20 p-6 rounded-2xl border border-blue-100 dark:border-blue-800/50'>
+          <div className='bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 p-6 rounded-2xl border border-blue-100 dark:border-blue-800/50'>
             <div className='text-3xl font-bold text-blue-800 dark:text-blue-800 mb-2'>
-              10K+
+              1K+
             </div>
             <div className='text-gray-600 dark:text-gray-400 font-medium'>
               Active Users
             </div>
           </div>
-          <div className='bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 p-6 rounded-2xl border border-green-100 dark:border-green-800/50'>
-            <div className='text-3xl font-bold text-green-600 dark:text-green-400 mb-2'>
-              $2M+
+          <div className='bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20 p-6 rounded-2xl border border-blue-100 dark:border-blue-800/50'>
+            <div className='text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2'>
+              Rp.2M++
             </div>
             <div className='text-gray-600 dark:text-gray-400 font-medium'>
               Money Tracked
@@ -110,7 +110,7 @@ const About = () => {
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
           <div className='group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100/50 dark:border-gray-700/50 hover:shadow-2xl transition-all duration-200 hover:-translate-y-1'>
-            <div className='absolute inset-0 bg-gradient-to-br from-blue-800/5 to-green-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200'></div>
+            <div className='absolute inset-0 bg-gradient-to-br from-blue-800/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200'></div>
             <div className='relative z-10'>
               <div className='w-12 h-12 bg-gradient-to-br from-blue-800 via-yellow-200 to-blue-800 rounded-xl flex items-center justify-center shadow-lg mb-6'>
                 <span className='text-white text-xl'>🤖</span>
@@ -127,9 +127,9 @@ const About = () => {
           </div>
 
           <div className='group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100/50 dark:border-gray-700/50 hover:shadow-2xl transition-all duration-200 hover:-translate-y-1'>
-            <div className='absolute inset-0 bg-gradient-to-br from-green-500/5 to-blue-800/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200'></div>
+            <div className='absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-800/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200'></div>
             <div className='relative z-10'>
-              <div className='w-12 h-12 bg-gradient-to-br from-green-500 via-teal-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg mb-6'>
+              <div className='w-12 h-12 bg-gradient-to-br from-blue-500 via-teal-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg mb-6'>
                 <span className='text-white text-xl'>✨</span>
               </div>
               <h3 className='text-xl font-bold mb-4 text-gray-900 dark:text-gray-100'>
@@ -146,7 +146,7 @@ const About = () => {
           <div className='group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100/50 dark:border-gray-700/50 hover:shadow-2xl transition-all duration-200 hover:-translate-y-1'>
             <div className='absolute inset-0 bg-gradient-to-br from-teal-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200'></div>
             <div className='relative z-10'>
-              <div className='w-12 h-12 bg-gradient-to-br from-teal-500 via-blue-500 to-green-500 rounded-xl flex items-center justify-center shadow-lg mb-6'>
+              <div className='w-12 h-12 bg-gradient-to-br from-teal-500 via-blue-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg mb-6'>
                 <span className='text-white text-xl'>📊</span>
               </div>
               <h3 className='text-xl font-bold mb-4 text-gray-900 dark:text-gray-100'>
@@ -165,7 +165,7 @@ const About = () => {
 
     {/* Story Section */}
     <section className='py-20 px-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm relative overflow-hidden'>
-      <div className='absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-800/5 to-green-500/5 rounded-full blur-2xl'></div>
+      <div className='absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-800/5 to-blue-500/5 rounded-full blur-2xl'></div>
       <div className='absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-teal-500/5 to-blue-500/5 rounded-full blur-2xl'></div>
 
       <div className='max-w-4xl mx-auto relative z-10'>
@@ -199,27 +199,27 @@ const About = () => {
             </p>
             <div className='flex items-center gap-4 pt-4'>
               <div className='flex -space-x-2'>
-                <div className='w-10 h-10 bg-gradient-to-br from-blue-800 to-green-500 rounded-full border-2 border-white dark:border-gray-800'></div>
-                <div className='w-10 h-10 bg-gradient-to-br from-green-500 to-blue-800 rounded-full border-2 border-white dark:border-gray-800'></div>
+                <div className='w-10 h-10 bg-gradient-to-br from-blue-800 to-blue-500 rounded-full border-2 border-white dark:border-gray-800'></div>
+                <div className='w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-800 rounded-full border-2 border-white dark:border-gray-800'></div>
                 <div className='w-10 h-10 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full border-2 border-white dark:border-gray-800'></div>
               </div>
               <div className='text-sm text-gray-600 dark:text-gray-400'>
-                <div className='font-semibold'>Trusted by 10,000+ users</div>
+                <div className='font-semibold'>Trusted by 1000+ users</div>
                 <div>Join our growing community</div>
               </div>
             </div>
           </div>
 
-          <div className='bg-gradient-to-br from-blue-50 to-green-50 dark:from-blue-900/20 dark:to-green-900/20 p-8 rounded-2xl border border-blue-100 dark:border-blue-800/50'>
+          <div className='bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 p-8 rounded-2xl border border-blue-100 dark:border-blue-800/50'>
             <div className='space-y-6'>
               <div className='flex items-center gap-4'>
                 <div className='w-3 h-3 bg-blue-800 dark:bg-blue-800 rounded-full'></div>
                 <div className='text-gray-900 dark:text-gray-100 font-medium'>
-                  Founded in 2024
+                  Founded in 2025
                 </div>
               </div>
               <div className='flex items-center gap-4'>
-                <div className='w-3 h-3 bg-green-500 dark:bg-green-400 rounded-full'></div>
+                <div className='w-3 h-3 bg-blue-500 dark:bg-blue-400 rounded-full'></div>
                 <div className='text-gray-900 dark:text-gray-100 font-medium'>
                   AI-First Approach
                 </div>
@@ -269,7 +269,7 @@ const About = () => {
         <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>
           <Link
             href='/sign-up'
-            className='group relative overflow-hidden bg-gradient-to-r from-blue-800 via-yellow-200 to-blue-800 hover:from-blue-700 hover:via-green-600 hover:to-teal-600 text-white px-8 py-4 rounded-2xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-200 transform hover:-translate-y-0.5'
+            className='group relative overflow-hidden bg-gradient-to-r from-blue-800 to-blue-700 hover:from-blue-700 hover:via-blue-600 hover:to-teal-600 text-white px-8 py-4 rounded-2xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-200 transform hover:-translate-y-0.5'
           >
             <span className='relative z-10 flex items-center gap-2'>
               Get Started Free
@@ -299,7 +299,7 @@ const About = () => {
             </div>
           </div>
           <div className='text-center'>
-            <div className='text-3xl font-bold text-green-600 dark:text-green-400 mb-2'>
+            <div className='text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2'>
               24/7
             </div>
             <div className='text-gray-600 dark:text-gray-400'>

@@ -8,7 +8,6 @@ import Modal from './modal';
 
 const Navbar = async () => {
     const user = await currentUser()
-    console.log(user)
 
     return (
         <div className='bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 fixed w-full z-50 border-none top-0'>
@@ -17,7 +16,7 @@ const Navbar = async () => {
                     <div className="navbar-start">
                         <Link href={"/"} className="btn btn-ghost text-xl flex gap-2">
                             <Logo />
-                            <h4 className='bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent'>Money Tracker</h4>
+                            <h4 className='bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 bg-clip-text text-transparent'>Money Tracker</h4>
                         </Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
@@ -93,9 +92,9 @@ const Navbar = async () => {
                                 <li><Link href={"/contact"}>Contact</Link></li>
                                 <li className='mt-5'>
                                     {user ? (<SignOutButton redirectUrl='/'>
-                                        <li className='btn btn-active btn-info rounded-2xl text-white font-bold'>Sign Out</li>
+                                        <span className='btn btn-active btn-info rounded-2xl text-white font-bold'>Sign Out</span>
                                     </SignOutButton>) : <SignInButton>
-                                        <li className='btn btn-active btn-info rounded-2xl text-white font-bold'>Sign In</li>
+                                        <span className='btn btn-active btn-info rounded-2xl text-white font-bold'>Sign In</span>
                                     </SignInButton>}
                                 </li>
                             </ul>

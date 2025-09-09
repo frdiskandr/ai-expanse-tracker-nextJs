@@ -49,6 +49,7 @@ const AddExpanseRecord = async (formData: FormData): Promise<RecordResult> => {
     }
 
     const { userId } = await auth();
+    console.error(userId)
 
     if (!userId) {
         return { error: "User Not Found!!" }
@@ -64,7 +65,7 @@ const AddExpanseRecord = async (formData: FormData): Promise<RecordResult> => {
         };
 
         const createRecord = await db.record.create({
-            data
+            data: data
         })
 
         const recordData: RecordData = {

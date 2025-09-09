@@ -1,36 +1,75 @@
 'use client'
 import AddExpanseRecord from '@/app/_Action/addExpenseRecord';
+import { SuggestCategory } from '@/app/_Action/SuggestCategory';
 import React, { useRef, useState } from 'react';
 
 type AlertMessage = 'success' | 'error' | null;
 function AddNewRecord() {
     const formRef = useRef<HTMLFormElement>(null);
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState<number | null>(null);
     const [alertMessage, setAlertMessage] = useState<string | null>(null)
     const [alertType, setAlertType] = useState<AlertMessage>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [category, setCategory] = useState('')
     const [description, setDescription] = useState('')
-    const [isCategorizingAI, setCategorizingAI] = useState(false);
+    const [isCategorizingAI, setIsCategorizingAI] = useState(false);
 
-    const clientAction = async (formdata: FormData) => {
+    const clientAction = async (formData: FormData) => {
+        setIsLoading(true);
+        setAlertMessage(null);
 
+        formData.set('amount', amount.toString());
+        formData.set('category', category.toString());
+
+        const { error } = await AddExpanseRecord(formData);
+
+        if (error) {
+            setAlertMessage(`Error ${error}`)
+            setAlertType("error");
+        } else {
+            setAlertMessage("Expanse record added successfully!")
+            setAlertType("success")
+            formRef.current?.reset();
+            setAmount(0)
+            setCategory("")
+            setDescription('')
+        }
+
+        setIsLoading(false);
     }
 
     const handleSugestCategory = async () => {
-        setCategorizingAI(!isCategorizingAI);
-        console.log(isCategorizingAI)
+        if (!description.trim()) {
+            setAlertMessage("Please enter a description first");
+            setAlertType("error")
+            return;
+        }
 
-        setTimeout(() => {
-            setCategorizingAI(false)
-            console.log(isCategorizingAI)
-        }, 2000)
+        setIsCategorizingAI(true);
+        setAlertMessage(null);
+
+        try {
+            const result = await SuggestCategory(description);
+            if (result.error) {
+                setAlertMessage(`AI Suggestion ${result.error}`)
+                setAlertType("error")
+            } else {
+                setCategory(result.category)
+                setAlertMessage(`AI Suggestion ${result.category}`)
+                setAlertType("success");
+            }
+        } catch (e) {
+            setAlertMessage("Failed to get AI category suggestion");
+            setAlertType("error")
+        } finally {
+            setIsCategorizingAI(false);
+        }
     }
 
     return (
         <div className='bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl border border-gray-700/50 hover:shadow-2xl text-black'>
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                <div className="w-8 h-8 sm:h-10 sm:w-10 bg-gradient-to-br from-blue-800 via-yellow-200 to-blue-600 rounded-xl border border-gray-100/50 flex items-center justify-center shadow-lg hover:shadow-2xl">
+                <div className="w-8 h-8 sm:h-10 sm:w-10 bg-gradient-to-br from-blue-600 to-blue-400 rounded-xl border border-gray-100/50 flex items-center justify-center shadow-lg hover:shadow-2xl">
                     <span className='text-white text-sm sm:text-lg'>💳</span>
                 </div>
                 <div>
@@ -93,7 +132,7 @@ function AddNewRecord() {
                 </div>
 
                 {/* category selection and amount */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 sm:p-4 bg-gradient-to-r from-blue-500/50 to-blue-800/10 rounded-xl border border-blue-100/50">
+                <div className="grid grid-cols-1 p-2 md:grid-cols-2 gap-3 sm:gap-4 sm:p-4 bg-gradient-to-r from-blue-500/50 to-blue-800/10 rounded-xl border border-blue-100/50">
                     <div className="space-y-1.5">
                         <label htmlFor="category" className='flex items-center gap-2 text-xs font-semibold text-gray-300 tracking-wide'>
                             <span className='w-1.5 h-1.5 bg-blue-400 rounded-full'></span>
@@ -213,15 +252,15 @@ function AddNewRecord() {
             {alertMessage && (
                 <div
                     className={`mt-4 p-3 rounded-xl border-l-4 backdrop-blur-sm ${alertType === 'success'
-                            ? 'bg-blue-50/80 dark:bg-blue-900/20 border-l-blue-500 text-blue-800 dark:text-blue-200'
-                            : 'bg-red-50/80 dark:bg-red-900/20 border-l-red-500 text-red-800 dark:text-red-200'
+                        ? 'bg-blue-50/80 dark:bg-blue-900/20 border-l-blue-500 text-blue-800 dark:text-blue-200'
+                        : 'bg-red-50/80 dark:bg-red-900/20 border-l-red-500 text-red-800 dark:text-red-200'
                         }`}
                 >
                     <div className='flex items-center gap-2'>
                         <div
                             className={`w-6 h-6 rounded-full flex items-center justify-center ${alertType === 'success'
-                                    ? 'bg-blue-100 dark:bg-blue-800'
-                                    : 'bg-red-100 dark:bg-red-800'
+                                ? 'bg-blue-100 dark:bg-blue-800'
+                                : 'bg-red-100 dark:bg-red-800'
                                 }`}
                         >
                             <span className='text-sm'>

@@ -4,7 +4,7 @@ import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 
-async function daleteRecord(recordId: string): Promise<{
+export default async function daleteRecord(recordId: string): Promise<{
     message?: string
     error?: string
 }> {
@@ -30,5 +30,3 @@ async function daleteRecord(recordId: string): Promise<{
         return {error: "Databases error"}
     }
 }
-
-export default daleteRecord
