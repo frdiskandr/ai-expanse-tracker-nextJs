@@ -1,7 +1,7 @@
 'use client';
 import { Record } from '@/types/record';
 import { useState } from 'react';
-import DeleteRecord from '@/app/_Action/deleterecords'
+import DeleteRecord from '@/app/Action/deleterecords'
 
 // Helper function to get category emoji
 const getCategoryEmoji = (category: string) => {
@@ -48,9 +48,8 @@ const RecordItem = ({ record }: { record: Record }) => {
       {/* Delete button positioned absolutely in top-right corner */}
       <button
         onClick={() => handleDeleteRecord(record.id)}
-        className={`absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white rounded-full w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center shadow-lg hover:shadow-xl border-2 border-white dark:border-gray-700 backdrop-blur-sm transform hover:scale-110 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-200 ${
-          isLoading ? 'cursor-not-allowed scale-100' : ''
-        }`}
+        className={`absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white rounded-full w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center shadow-lg hover:shadow-xl border-2 border-white dark:border-gray-700 backdrop-blur-sm transform hover:scale-110 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-200 ${isLoading ? 'cursor-not-allowed scale-100' : ''
+          }`}
         aria-label='Delete record'
         disabled={isLoading} // Disable button while loading
         title='Delete expense record'

@@ -1,12 +1,12 @@
 'use client'
-import AddExpanseRecord from '@/app/_Action/addExpenseRecord';
-import { SuggestCategory } from '@/app/_Action/SuggestCategory';
+import AddExpanseRecord from '@/app/Action/addExpenseRecord';
+import { SuggestCategory } from '@/app/Action/SuggestCategory';
 import React, { useRef, useState } from 'react';
 
 type AlertMessage = 'success' | 'error' | null;
 function AddNewRecord() {
     const formRef = useRef<HTMLFormElement>(null);
-    const [amount, setAmount] = useState<number | null>(null);
+    const [amount, setAmount] = useState<number | null>(0);
     const [alertMessage, setAlertMessage] = useState<string | null>(null)
     const [alertType, setAlertType] = useState<AlertMessage>(null);
     const [isLoading, setIsLoading] = useState(false);

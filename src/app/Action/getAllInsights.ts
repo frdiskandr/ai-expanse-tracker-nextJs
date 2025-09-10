@@ -60,6 +60,7 @@ export async function getAIInsights(): Promise<AIInsight[]> {
         }))
 
         const insights = await GenerateExpanseInsights(expensesData)
+        console.log("insight from ai insight: ", insights)
         return insights;
     } catch (e) {
         console.error('Error getting AI insights:', e);

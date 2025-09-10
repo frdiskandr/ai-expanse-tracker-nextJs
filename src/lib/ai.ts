@@ -9,10 +9,10 @@ interface RawInsight {
 }
 
 const openAi = new OpenAI({
-    baseURL: 'https://oepnrouter.ai/api/v1',
+    baseURL: 'https://openrouter.ai/api/v1',
     apiKey: process.env.OPENROUTER_API_KEY || process.env.AI_API_KEY,
     defaultHeaders: {
-        'HTTP-Referer': process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+        // 'HTTP-Referer': process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
         'X-Title': 'ExpenseTracker AI',
     }
 })
@@ -36,12 +36,12 @@ export interface AIInsight {
 
 export async function GenerateExpanseInsights(expenses: ExpanseRecord[]): Promise<AIInsight[]> {
     try {
-        const expensesSumary = expenses.map(e => {
-            amount: e.amount
-            category: e.category
-            description: e.description
-            date: e.date
-        })
+        const expensesSumary = expenses.map(e => ({
+            amount: e.amount,
+            category: e.category,
+            description: e.description,
+            date: e.date,
+        }))
 
         const promt = (`Analyze the following expense data and provide 3-4 actionable financial insights. 
         Return a JSON array of insights with this structure:

@@ -1,11 +1,11 @@
 import React from 'react'
 import BarChart from './BarChart'
-import GetRecords from '@/app/_Action/getRecords'
+import GetRecords from '@/app/Action/getRecords'
 
 export const RecordChart = async () => {
-  const {records, error} = await GetRecords();
+  const { records, error } = await GetRecords();
 
-    if (error) {
+  if (error) {
     return (
       <div className='bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl border border-gray-100/50 dark:border-gray-700/50 hover:shadow-2xl'>
         <div className='flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6'>
@@ -36,7 +36,7 @@ export const RecordChart = async () => {
     );
   }
 
-    if (!records || records.length === 0) {
+  if (!records || records.length === 0) {
     return (
       <div className='bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl border border-gray-100/50 dark:border-gray-700/50 hover:shadow-2xl'>
         <div className='flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6'>
@@ -68,7 +68,7 @@ export const RecordChart = async () => {
     );
   }
 
-    return (
+  return (
     <div className='bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl border border-gray-100/50 dark:border-gray-700/50 hover:shadow-2xl'>
       <div className='flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6'>
         <div className='w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 via-blue-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg'>
@@ -85,7 +85,7 @@ export const RecordChart = async () => {
       </div>
       <div className='overflow-x-auto'>
         <BarChart
-          records ={records.map((record) => ({
+          records={records.map((record) => ({
             ...record,
             date: String(record.date),
           }))}
