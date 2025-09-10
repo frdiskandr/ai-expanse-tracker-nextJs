@@ -68,7 +68,7 @@ const Navbar = async () => {
                                 {/* drop down mobile */}
                                 <li className={`${user ? "" : "hidden"}`}><div className="avatar p-3 flex">
                                     <div className="w-[3rem] rounded-full">
-                                        <Image src={user?.imageUrl} width={100} height={100} alt=''/>
+                                        <Image src={user?.imageUrl} width={100} height={100} alt='' />
                                     </div>
                                     <ul>
                                         <li className='font-bold'>{user?.fullName}</li>

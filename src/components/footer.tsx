@@ -13,7 +13,7 @@ const Footer = () => {
           <div className='text-center md:text-left'>
             <div className='inline-flex items-center gap-2 mb-4'>
               <Logo/>
-              <h2 className='text-xl font-bold bg-gradient-to-r from-blue-400 via-yellow-200 to-blue-900 bg-clip-text text-transparent'>
+              <h2 className='text-xl font-bold bg-gradient-to-r from-blue-400 via-white/80 to-blue-900 bg-clip-text text-transparent'>
                 ExpenseTracker AI
               </h2>
             </div>

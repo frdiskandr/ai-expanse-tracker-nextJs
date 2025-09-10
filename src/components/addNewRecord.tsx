@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react';
 type AlertMessage = 'success' | 'error' | null;
 function AddNewRecord() {
     const formRef = useRef<HTMLFormElement>(null);
-    const [amount, setAmount] = useState<number | null>(0);
+    const [amount, setAmount] = useState<number>(0);
     const [alertMessage, setAlertMessage] = useState<string | null>(null)
     const [alertType, setAlertType] = useState<AlertMessage>(null);
     const [isLoading, setIsLoading] = useState(false);
@@ -59,6 +59,7 @@ function AddNewRecord() {
                 setAlertType("success");
             }
         } catch (e) {
+            console.error(e)
             setAlertMessage("Failed to get AI category suggestion");
             setAlertType("error")
         } finally {

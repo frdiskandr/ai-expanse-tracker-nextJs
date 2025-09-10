@@ -83,7 +83,7 @@ const Contact = () => {
                   className='inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200 text-sm sm:text-base break-all sm:break-normal'
                 >
                   <span className='hidden sm:inline'>
-                    support@expensetracker-ai.com
+                    fariditb159@gmail.com
                   </span>
                   <span className='sm:hidden'>Email Us</span>
                   <span className='text-sm'>→</span>
@@ -105,10 +105,10 @@ const Contact = () => {
                   with urgent matters.
                 </p>
                 <a
-                  href='tel:+11234567890'
+                  href='tel:+6281383156812'
                   className='inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200 text-sm sm:text-base'
                 >
-                  +1 (123) 456-7890
+                  +6281-38315-6812
                   <span className='text-sm'>→</span>
                 </a>
               </div>
@@ -128,9 +128,9 @@ const Contact = () => {
                   partnership discussions.
                 </p>
                 <div className='text-blue-600 dark:text-blue-400 font-medium text-sm sm:text-base'>
-                  123 AI Innovation St
+                  123 AI Innovation
                   <br />
-                  Tech City, USA
+                  Tech Bogor, Indonesia
                 </div>
               </div>
             </div>
@@ -167,11 +167,11 @@ const Contact = () => {
               <div className='space-y-2 text-sm sm:text-base text-gray-600 dark:text-gray-400'>
                 <div className='flex justify-between'>
                   <span>Monday - Friday:</span>
-                  <span className='font-medium'>9:00 AM - 6:00 PM PST</span>
+                  <span className='font-medium'>9:00 AM - 6:00 PM WIB</span>
                 </div>
                 <div className='flex justify-between'>
                   <span>Saturday:</span>
-                  <span className='font-medium'>10:00 AM - 4:00 PM PST</span>
+                  <span className='font-medium'>10:00 AM - 4:00 PM WIB</span>
                 </div>
                 <div className='flex justify-between'>
                   <span>Sunday:</span>
